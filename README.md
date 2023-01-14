@@ -1,14 +1,6 @@
 # adenovirus-project
 
 
-# Frontend
-
-Firstly, go to the frontend directory.
-
-For installinng dependencies:
-
-  ### `yarn install`
- 
 
 # Available endpoints:
 
