@@ -1,0 +1,6 @@
+.toggle-container{
+    position: absolute;
+    z-index: 4;
+    height: 240px;
+    top: 170px;
+}

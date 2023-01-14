@@ -1,0 +1,25 @@
+.App {
+  text-align: center;
+}
+
+@media (max-width: 992px) {
+  .routes {
+    margin-top: 50px;
+  }
+}
+
+html,
+body {
+  height: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.content {
+  min-height: calc(100vh - 34px);
+}
+
+.test {
+  backgroundcolor: rgb(152, 158, 152);
+}
+

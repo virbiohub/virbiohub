@@ -1,0 +1,48 @@
+.customContainer {
+  height: 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+}
+
+.toolIcon {
+  width: 400px;
+}
+
+.linkContainer {
+  display: block;
+  text-decoration: none;
+}
+
+.a {
+  margin: 10px;
+}
+
+.hover {
+  width: 40px;
+  height: 40px;
+}
+
+.cardContainer {
+  height: 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+}
+
+.cardImg {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  size: 40px;
+}
+
+.cardText {
+  text-align: center;
+  font-weight: 500;
+}
