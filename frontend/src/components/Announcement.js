@@ -19,17 +19,12 @@ const Announcement = () => {
   }, []);
 
   return (
-    <Card
-      style={{
-        marginTop: "4%",
-        marginBottom: "4%",
-      }}
-    >
-      <Card.Body>
+    <>
         <Card.Title
           style={{
+            marginTop: "2%",
             textAlign: "center",
-            backgroundColor: "#2B7C85",
+            backgroundColor: "#222831",
             paddingTop: "0.5%",
             width: "100%",
             height: "50%",
@@ -61,8 +56,7 @@ const Announcement = () => {
             );
           })}
         </div>
-      </Card.Body>
-    </Card>
+    </>
   );
 };
 

@@ -41,7 +41,7 @@ export const OurTeam = () => {
   );
 
   return (
-    <div style={{ marginBottom: "20%" }}>
+    <div>
       {isLoading ? (
         <CustomBackdrop isLoading={isLoading} />
       ) : (
@@ -52,8 +52,8 @@ export const OurTeam = () => {
           >
             <div className="row ">
               <div
-                className="col-md-8"
-                style={{ backgroundColor: "#87ACA3", marginLeft: "20%" }}
+                className="col-md-8 text-center "
+                style={{ marginLeft: "20%" }}
               >
                 {lead.map((person) => (
                   <PersonCard

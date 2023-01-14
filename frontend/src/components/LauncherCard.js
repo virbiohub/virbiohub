@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./LauncherCard.css";
+import {FiExternalLink} from "react-icons/fi";
 const LauncherCard = ({
   iconTitle1,
   iconTitle2,
@@ -19,7 +20,7 @@ const LauncherCard = ({
 
   return (
     <div
-      className=" p-2  rounded align-center mainContainer"
+      className="p-2 rounded align-center mainContainer"
       style={{
         height: "50%",
         width: "40%",
@@ -27,7 +28,7 @@ const LauncherCard = ({
       }}
     >
       <div
-        className=" p-2  rounded align-center"
+        className="p-2 rounded align-center fs-2"
         style={
           isHover
             ? {
@@ -38,17 +39,15 @@ const LauncherCard = ({
         }
       >
         <Link
-          className="btn  btn-block "
           to={to}
           style={{
-            backgroundColor: `${bg}`,
+            textDecoration: "underline",
             width: "90%",
             height: "90%",
+            color: "#00ADB5",
           }}
         >
-          <h4 className="text-white" style={{ margin: "20px" }}>
-            {iconTitle2}
-          </h4>
+          {iconTitle2} <FiExternalLink size={30} style={{ display: "inline-block" }}/>
         </Link>
       </div>
     </div>

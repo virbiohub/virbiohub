@@ -91,7 +91,7 @@ const PredicterResultTable = ({ data, headers }) => {
         <button
           className="btn btn-secondary dropdown-toggle"
           type="button"
-          style={{ marginBottom: "10px" }}
+          style={{ marginBottom: "10px", backgroundColor: "#393E46" }}
           id="dropdownMenuButton"
           data-toggle="dropdown"
           onClick={() => {
@@ -123,8 +123,8 @@ const PredicterResultTable = ({ data, headers }) => {
                     className="text-white  flex-column th-sm "
                     style={{
                       textAlign: "center",
-                      backgroundColor: "#2B7C85",
-                      fontSize: "14px",
+                      backgroundColor: "#00ADB5",
+                      fontSize: "10px",
                       fontWeight: "normal",
                       alignContent: "center",
                       height: "50px",

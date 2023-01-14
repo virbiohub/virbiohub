@@ -34,7 +34,7 @@ const Publications = () => {
           className="container text-center mt-5"
           style={{ color: "#665d1e" }}
         >
-          <h2 className="featurette-heading" style={{marginTop:"2%"}}>Publications</h2>
+          <h2 className="featurette-heading" style={{marginTop:"2%", color: "#222831"}}>Publications</h2>
    
         </div>
         <div>

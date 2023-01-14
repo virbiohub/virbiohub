@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import "./ToolWrapper.css";
 import { Link } from "react-router-dom";
-import { GiVirus } from "react-icons/gi";
+import { FaBiohazard } from "react-icons/fa";
 import { RiVirusLine } from "react-icons/ri";
 import { BsTable } from "react-icons/bs";
 import { Card, CardBody, CardTitle } from "reactstrap";
-import { GrCatalog } from "react-icons/gr";
+import { FiBookOpen } from "react-icons/fi";
+
 
 const ToolWrapper = (props) => {
   const [isHover, setIsHover] = useState(false);
@@ -43,11 +44,11 @@ const ToolWrapper = (props) => {
           >
             <div className="cardImg" style={{ color: `${props.color}` }}>
               {props.type === "db" ? (
-                <GrCatalog size={60} style={{ marginLeft: "17px" }} />
+                <FiBookOpen size={60} style={{ marginLeft: "17px" }} />
               ) : props.title === "Virus-Host PPI Predictor" ? (
                 <RiVirusLine size={60} style={{ marginLeft: "20px" }} />
               ) : (
-                <GiVirus size={60} style={{ marginLeft: "12px" }} />
+                <FaBiohazard size={60} style={{ marginLeft: "12px" }} />
               )}
             </div>
             <br />

@@ -13,14 +13,15 @@ const SequenceInput = ({
   const isInputEntered = value.length != 0;
 
   return (
-    <form className="form-group " style={{ marginTop: "8%" }}>
+    <form className="form-group " style={{ margin: "5%" }}>
       <div>
         <div className=" text-center">
-          <label>
+          <label className="mb-2">
             <b>Enter The {title} Protein Sequence:</b>
           </label>
           <div>
             <textarea
+              style={{ background: "#EEEEEE" }}
               className="form-control"
               aria-label="textarea"
               value={value}
@@ -33,13 +34,13 @@ const SequenceInput = ({
             )}
           </div>
 
-          <div className=" text-center p-2 text-white">
+          <div className=" text-center p-2">
             <label className=" ">OR</label>
           </div>
         </div>
       </div>
       <div className="">
-        <label>
+        <label className="mb-2">
           <b>Select Fasta File</b>
         </label>
         <div className="custom-file">
@@ -55,7 +56,7 @@ const SequenceInput = ({
           <label
             className="custom-file-label"
             style={
-              isInputEntered ? { background: "rgba(255,255,255,0.4)" } : {}
+              isInputEntered ? { background: "rgba(238,238,238,0.5)" } : { background: "#EEEEEE" }
             }
           >
             Choose file

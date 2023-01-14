@@ -1,0 +1,21 @@
+
+.coronaBackGround{
+    background-image: url('../assets/background-image-modified.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+}
+
+.adenoBackGround{
+    background-image: url('../assets/editedAdeno.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+}
+
+.bioTitle{
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -30%);
+}

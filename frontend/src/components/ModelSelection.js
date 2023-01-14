@@ -39,13 +39,18 @@ const ModelSelection = ({ tool, handleSelectedTools }) => {
           type="checkbox"
           onChange={onSelectionChange.bind(null, tool?.cmd_arg)}
           checked={isModelSelected}
-          style={{ height: 14, width: 14 }}
+          style={{ 
+            height: 14, 
+            width: 14,
+            accentColor: "#222831"
+          }}
         />
 
         <button
           className="btn btn-link"
           id={tool?.name + "ref"}
           onMouseEnter={handleTooltip.bind(null, tool?.name)}
+          style={{ color: "#222831" }}
         >
           {tool?.name}
         </button>

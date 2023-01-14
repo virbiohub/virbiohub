@@ -14,7 +14,7 @@ function Footer() {
     >
       <div className="row">
         <div className="text-center">
-          <span> Copyright ©️ 2022 </span>
+          <span> Copyright ©️ </span>
           <a
             className="text-dark"
             style={{ cursor: "pointer", color: "#0645AD" }}

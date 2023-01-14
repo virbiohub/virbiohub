@@ -1,4 +1,4 @@
-from django.shortcuts import render
+                                                                                        from django.shortcuts import render
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from viral_api.models import Viruses, Announcement, ViralPredictions, Member, Publication,Model,Content
@@ -111,7 +111,7 @@ class VirusHostAV(APIView):
 
 class PPIPredicter(APIView):
     parser_classes = (MultiPartParser,)
-
+    
     def post(self, request, format=None):
         HOSTFILE = "host.fasta"
         VIRUSFILE = "virus.fasta"
@@ -154,7 +154,7 @@ class PPIPredicter(APIView):
             # resultFilePath + " " + hostFilePath + " " + virusFilePath)
         except Exception as e:
             print("exception",e)
-            return Response({"Status": "failed", "error": str(e)})
+              return Response({"Status": "failed", "error": str(e)})
 
             # READ PPI PREDICTION RESULTS
         try:
@@ -228,7 +228,7 @@ class ViralInfectionPredicterOptions(APIView):
 
        # return Response({"error": "No Options found", "status": status.HTTP_404_NOT_FOUND})
 
-class ViralInfectionPredicter(APIView):
+       class ViralInfectionPredicter(APIView):
     def get(self, request, format=None):
         params = request.query_params
         tables = ViralPredictions.objects.all()
@@ -255,9 +255,9 @@ class ViralInfectionPredicter(APIView):
         headers['result'].append("prediction")
 
         return Response({"data": result, "headers": headers, "status": status.HTTP_200_OK})
-
-
-class MembersAV(APIView):
+        
+        
+    class MembersAV(APIView):
     def get(self, request):
         members = Member.objects.all()
         member_serializer = MemberSerializer(
@@ -298,3 +298,4 @@ class ContentAV(APIView):
             return Response({"data": content_serializer.data, "status": status.HTTP_200_OK})
         else:
             return Response(status=status.HTTP_404_NOT_FOUND)
+

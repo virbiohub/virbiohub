@@ -20,12 +20,15 @@ const PPIPredictionIntro = () => {
         <CustomBackdrop isLoading={Content.isLoading} />
       ) : (
         <>
-          <h4 className=" featurette-heading">
-            Protein-Protein Interaction Predictor
-          </h4>
-          <hr />
-          <div className="row featurette shadow-lg p-3 mt-4 justify-content-center">
+          <div className="row featurette">
             <div className="col order-md-2" style={{ marginTop: "2%" }}>
+              <div className="row featurette">
+                <LauncherCard
+                  iconTitle2="Virus-Host PPI Predictor"
+                  to="/ppi-predictor"
+                  style={{ width: "65%", height: "10%" }}
+                />
+              </div>
               <p
                 style={{
                   textAlign: "justify",
@@ -35,17 +38,6 @@ const PPIPredictionIntro = () => {
               >
                 {content}
               </p>
-
-              <div className="row featurette p-3 mt-4 justify-content-center">
-                <LauncherCard
-                  iconTitle1="Launch"
-                  iconTitle2="Virus-Host PPI Predictor"
-                  bg="#87aca3"
-                  to="/ppi-predictor"
-                  hoverColor="#9dc209"
-                  style={{ width: "60%", height: "10%" }}
-                />
-              </div>
             </div>
             <div className="col-md-5 order-md-1">
               <br />
@@ -54,8 +46,7 @@ const PPIPredictionIntro = () => {
                 <figcaption
                   style={{
                     display: "flex",
-                    marginLeft: "10%",
-
+                    marginLeft: "4%",
                     fontSize: "10px",
                   }}
                 >

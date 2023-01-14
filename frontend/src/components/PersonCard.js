@@ -38,75 +38,41 @@ const PersonCard = (props) => {
   };
   return (
     <div
-      className={props.title === "PhD" ? `` : `col-md-8`}
+      className={props.title === "PhD" ? `` : `col-md-8 text-center`}
       style={{
         marginBottom: "10%",
       }}
     >
-      <div className="card-header " style={{ backgroundColor: "#87ACA3" }}>
+      <div
+        className="card-header card-body small text-muted text-center"
+        style={{ backgroundColor: "#222831"}}
+      >
         <b
           style={{
             color: "white",
-            marginLeft:
-              props.e_posta === "barissuzek@mu.edu.tr" ? `40%` : "20%",
           }}
         >
           {toTitle(props.name)}
         </b>
       </div>
 
-      <div className="card shadow-lg">
+      <div className="card shadow-lg" style={{ backgroundColor: "#EEEEEE"}}>
         <img
           style={{ width: "250px", height: "250px", marginTop: "20px" }}
-          className="featurette-image img-fluid mx-auto  border-dark shadow-lg rounded "
+          className="img-fluid img-thumbnail shadow-sm mx-auto"
           src={props.image}
           alt="member"
         />
-        <div className="card-body">
-          <p className="text-center">{props.role}</p>
+        <div className="card-body small text-muted">
+          <p  style={{ color: "#00ADB5" }}className="text-center text-uppercase mb-1">{props.role}</p>
 
-          <hr />
-
-          <p>
-            <b>E-mail : </b>
-            <span
-              onClick={contactHandler}
-              style={{ color: "#175873", cursor: "pointer" }}
-            >
-              {props.e_posta}
-            </span>
-            <br />
-            {props.e_posta == "barissuzek@mu.edu.tr" ? (
-              <>
-                <span>
-                  <b>Web :</b>
-                </span>
-                <a
-                  href="http://akademik.mu.edu.tr/barissuzek"
-                  target="_blank"
-                  style={{
-                    marginLeft: "8px",
-                    textDecoration: "None",
-                    color: "#175873",
-                    marginLeft: "1%",
-                  }}
-                  rel="noreferrer"
-                >
-                  http://akademik.mu.edu.tr/barissuzek
-                </a>
-                <br />
-              </>
-            ) : null}
-            <b>Phone :</b> {props.phone} <br />
-          </p>
-
-          <div className="float-right">
+          <div className="text-center float-right mb-1">
             <FaResearchgate
-              style={{ cursor: "pointer", marginRight: "10px" }}
+              style={{ cursor: "pointer", marginRight: "20px" }}
               onClick={redirectToResearchGate}
             />
             <GrLinkedin
-              style={{ cursor: "pointer", marginRight: "10px" }}
+              style={{ cursor: "pointer", marginRight: "20px" }}
               onClick={redirectToLinkedin}
             />
             <SiGooglescholar
@@ -114,6 +80,35 @@ const PersonCard = (props) => {
               onClick={redirectToGoogleScholar}
             />
           </div>
+
+          <p>
+            <p style={{ color: "#00ADB5" }}>E-mail :
+            <span
+              onClick={contactHandler}
+              style={{ color: "#222831", cursor: "pointer" }}
+            > {props.e_posta} </span>
+            </p>
+            {props.e_posta == "barissuzek@mu.edu.tr" ? (
+              <>
+                  <p style={{ color: "#00ADB5" }}>Web :
+                <a
+                  href="http://akademik.mu.edu.tr/barissuzek"
+                  target="_blank"
+                  style={{
+                    marginLeft: "8px",
+                    textDecoration: "None",
+                    color: "#222831",
+                    marginLeft: "1%",
+                  }}
+                  rel="noreferrer"
+                >
+                  http://akademik.mu.edu.tr/barissuzek
+                </a>
+                </p>
+              </>
+            ) : null}
+            <p style={{ color: "#00ADB5" }}>Phone :<span style={{ color: "#222831" }}> {props.phone}</span></p> 
+          </p>
         </div>
       </div>
     </div>

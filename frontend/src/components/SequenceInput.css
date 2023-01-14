@@ -53,9 +53,9 @@ border-radius: .25rem;}
     height: calc(1.5em + .75rem);
     padding: .375rem .75rem;
     line-height: 1.5;
-    color: #495057;
+    color: #fff;
     content: "Browse";
-    background-color: #e9ecef;
+    background-color: #222831;
     border-left: inherit;
     border-radius: 0 .25rem .25rem 0;
 }

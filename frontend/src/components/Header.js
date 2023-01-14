@@ -36,13 +36,13 @@ const Header = () => {
               </Container>
             </div>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-            <Navbar.Collapse id="responsive-navbar-nav">
+            <Navbar.Collapse id="responsive-navbar-nav mr-5">
               <Nav className="me-auto">
                 <Navbar.Brand>
                   <Nav.Link
                     to="/"
                     className="nav-link navItem"
-                    style={{ color: "white" }}
+                    style={{ color: "white", fontWeight: 250 }}
                     as={NavLink}
                     eventKey="1"
                   >
@@ -54,6 +54,7 @@ const Header = () => {
                   title="Resources"
                   id="basic-nav-dropdown"
                   className="nav-link navItem"
+                  style={{ color: "white", fontWeight: 250 }}
                 >
                   <NavDropdown.Item
                     as={Link}
@@ -88,9 +89,7 @@ const Header = () => {
                     className="nav-link navItem"
                     to="/team"
                     as={NavLink}
-                    style={{
-                      color: "white",
-                    }}
+                    style={{ color: "white", fontWeight: 250 }}
                     eventKey="2"
                   >
                     Our Team
@@ -100,7 +99,7 @@ const Header = () => {
                   <Nav.Link
                     className="nav-link"
                     to="/publications"
-                    style={{ color: "white", marginRight: "4%" }}
+                    style={{ color: "white", fontWeight: 250, marginRight: "4%" }}
                     as={NavLink}
                     eventKey="6"
                   >

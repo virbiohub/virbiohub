@@ -3,7 +3,7 @@ import PersonCard from "./PersonCard";
 
 const TeamMemberWrapper = (props) => {
   return (
-    <div className="card " style={{ marginTop: "100px", marginBottom: "2%" }}>
+    <div className="card ">
       <h3
         className=" d-flex justify-content-center"
         style={{ marginTop: "3%", marginBottom: "3%" }}

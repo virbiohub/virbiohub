@@ -1,0 +1,7 @@
+.a {
+    border: 1px solid linear-gradient(to right top, rgba(238,238,238,0.7), rgba(238,238,238,0.3));
+    background: white;
+    background: linear-gradient(to right top, rgba(238,238,238,0.7), rgba(238,238,238,0.3));
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}

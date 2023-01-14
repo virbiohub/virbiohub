@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import "./HomeP.css";
 import ToolWrapper from "../components/ToolWrapper";
 import Intro from "../components/Intro";
 import Announcements from "../components/Announcement";
@@ -6,6 +7,7 @@ import tools from "../data/tools";
 import GoogleMap from "../components/GoogleMap";
 import Address from "../components/Address";
 import useContent from "../hooks/useContent";
+import coronaImage from "../assets/background-image-modified.png";
 
 export const Home = () => {
   const [image, setImage] = useState(null);
@@ -17,12 +19,33 @@ export const Home = () => {
   }, [Content]);
 
   return (
-    <div style={{ marginTop: 90 }}>
-      <div className="container ">
-        <div className=" justify-content-center " style={{ marginLeft: "7%" }}>
-          <Intro image={image} content={content} />
+    <>
+      <div class="row" style={{ height: "100vh" }}>
+        <div class="col coronaBackGround"></div>
+        <div class="col">
+          <div class="bioTitle">
+            <h1 class="pb-4">Welcome to VirBioHub</h1>
+            <h4>
+              VirBioHub is developed by a group of bioinformaticians from
+              different backgrounds at Muğla Sıtkı Koçman University.
+            </h4>
+          </div>
         </div>
+      </div>
 
+      <div class="row">
+        <div class="col-7 p-0">
+            <div
+              className=" justify-content-center"
+              style={{ marginLeft: "10%",  minHeight: "100vh",  display: "flex", alignItems: "center" }}
+            >
+              <Intro image={image} content={content} />
+            </div>
+          </div>
+        <div class="col-5 p-0 adenoBackGround"></div>
+      </div>
+
+      <div className="container" style={{ marginTop: 30 }}>
         <div className="row card-body">
           <div className="d-flex justify-content-center">
             <div className="row">
@@ -40,7 +63,7 @@ export const Home = () => {
           </div>
         </div>
       </div>
-      <div className="container card ">
+      <div className="container card " style={{ border: "none" }}>
         <Announcements />
       </div>
       <div className="container">
@@ -53,7 +76,7 @@ export const Home = () => {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

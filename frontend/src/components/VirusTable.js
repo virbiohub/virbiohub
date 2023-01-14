@@ -154,7 +154,7 @@ const VirusTable = () => {
               <button
                 className="btn btn-secondary dropdown-toggle"
                 type="button"
-                style={{ marginLeft: 0 }}
+                style={{ marginLeft: 0, backgroundColor: "#393E46" }}
                 id="dropdownMenuButton"
                 data-toggle="dropdown"
                 onClick={() => {
@@ -178,6 +178,7 @@ const VirusTable = () => {
                 type="button"
                 id="dropdownMenuButton"
                 data-toggle="dropdown"
+                style={{ backgroundColor: "#393E46"}}
                 onClick={() => {
                   setShowDropdown(!showDropdown);
                 }}
@@ -219,7 +220,7 @@ const VirusTable = () => {
                       className="text-white  flex-column th-sm "
                       style={{
                         textAlign: "center",
-                        backgroundColor: "#2B7C85",
+                        backgroundColor: "#00ADB5",
                         fontSize: "12px",
                         fontWeight: "normal",
                       }}

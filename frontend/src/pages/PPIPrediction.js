@@ -1,4 +1,5 @@
 import React, { useRef, useState, useCallback, useEffect } from "react";
+import "./PPIPrediction.css"
 import { useHistory } from "react-router-dom";
 import SequenceInput from "../components/SequenceInput";
 import useInput from "../hooks/useInput";
@@ -13,6 +14,7 @@ import ModelSelection from "../components/ModelSelection";
 import axios from "../config/@axios";
 
 import { Popover, PopoverHeader, PopoverBody } from "reactstrap";
+import { BsInfoCircleFill } from "react-icons/bs";
 const PPIPrediction = () => {
   const dispatch = useDispatch();
 
@@ -109,23 +111,21 @@ const PPIPrediction = () => {
   return (
     <>
       <div
-        className="container"
-        style={{ marginTop: "3%", marginBottom: "8%" }}
+        className="container a"
+        style={{ marginTop: "5%"}}
       >
-        <div className="text-center  text-dark p-3">
-          <h4 className="featurette-heading ">
+        <div className="text-center  text-white pt-5 p-3">
+          <h1 className="featurette-heading mb-0" style={{ color: "#222831" }}>
             <em> Virus-Host PPI Predictor</em>
-          </h4>
-          <hr />
+          </h1>
         </div>
         <div className="row">
           <div
             className="col-sm-12  text-center"
-            style={{ backgroundColor: "#b9b7bd" }}
           >
             <div className="row  text-center centered">
-              <div className="col-sm" style={{ backgroundColor: "#b9b7bd" }}>
-                <div className="col-sm-12  text-center">
+              <div className="col-sm">
+                <div className="col-sm-12 text-center">
                   <SequenceInput
                     title="Host"
                     fileRef={hostFileRef}
@@ -164,22 +164,27 @@ const PPIPrediction = () => {
             </div>
 
             <div>
-              <hr />
-              <div>
-                <span style={{ fontSize: "18px" }}>
-                  <b>TOOLS</b>
-                </span>
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "flex-start",
+                  justifyContent: "center",
+                }}
+              >
                 <span
                   style={{
                     cursor: "pointer",
-                    color: "blue",
-                    marginLeft: "6px",
+                    color: "#222831",
+                    marginRight: "12px",
                   }}
                   onMouseEnter={() => setShowToolsInfo(true)}
                   onMouseLeave={() => setShowToolsInfo(false)}
                   id={"toolInforef"}
                 >
-                  ?
+                  <BsInfoCircleFill/>
+                </span>
+                <span style={{ fontSize: "18px", alignContent: "center"}}>
+                  <b>TOOLS</b>
                 </span>
                 <Popover
                   flip
@@ -208,8 +213,6 @@ const PPIPrediction = () => {
                     />
                   ))}
               </div>
-
-              <hr />
             </div>
 
             <Button
@@ -225,11 +228,11 @@ const PPIPrediction = () => {
                 )
               }
               style={{
-                marginTop: "4%",
+                marginTop: "2%",
                 marginBottom: "2%",
-                backgroundColor: "#2B7C85",
-                borderColor: "#2B7C85",
-                width: "8%",
+                backgroundColor: "#222831",
+                borderColor: "#222831",
+                width: "20%",
               }}
               onClick={predictorHandler}
             >

@@ -17,16 +17,21 @@ const ViralInfectionPredictionIntro = () => {
   return (
     <div
       className="container marketing"
-      style={{ marginTop: "4%", marginBottom: "4%" }}
+      style={{ marginTop: "6%", height: "100%", marginBottom: "7%" }}
     >
       {Content.isLoading ? (
         <CustomBackdrop isLoading={Content.isLoading} />
       ) : (
         <>
-          <h4>Viral Infection Predictor</h4>
-          <hr />
-          <div className="row featurette shadow-lg p-3 mt-4">
-            <div className="col-md-7 order-md-2">
+          <div className="row featurette">
+            <div className="col-md-7 order-md-2" style={{ marginTop: "2%" }}>
+              <div className="row featurette">
+                <LauncherCard
+                  iconTitle2="Viral Infection Predictor"
+                  to="viral-infection-predictor"
+                  style={{ width: "65%", height: "10%" }}
+                ></LauncherCard>
+              </div>
               <p
                 style={{
                   textAlign: "justify",
@@ -36,25 +41,15 @@ const ViralInfectionPredictionIntro = () => {
               >
                 {content}
               </p>
-              <div className="row featurette p-3 mt-4 justify-content-center">
-                <LauncherCard
-                  title="Launch Viral Infection Prediction"
-                  to="viral-infection-predictor"
-                  bg="#87aca3"
-                  iconTitle1="Launch"
-                  iconTitle2="Viral Infection Predictor"
-                  style={{ width: "60%", height: "10%" }}
-                ></LauncherCard>
-              </div>
             </div>
             <div className="col-md-5 order-md-1">
+              <br/>
               <figure>
                 <img className="ml-4" height="80%" width="80%" src={image} />
                 <figcaption
                   style={{
                     display: "flex",
                     marginLeft: "5%",
-
                     fontSize: "10px",
                   }}
                 >

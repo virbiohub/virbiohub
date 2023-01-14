@@ -68,20 +68,55 @@ const ViralInfectionInput = ({ virusfamily }) => {
     await dispatch(runPredicter(virusfamily, hosts, viruses));
   };
 
+  const customStyles = {
+    control: (base, state) => ({
+      ...base,
+      background: "#EEEEEE",
+      // match with the menu
+      borderRadius: state.isFocused ? "3px 3px 0 0" : 3,
+      // Overwrittes the different states of border
+      borderColor: state.isFocused ? "#00ADB5" : "#EEEEEE",
+      // Removes weird border around container
+      boxShadow: state.isFocused ? null : null,
+      "&:hover": {
+        // Overwrittes the different states of border
+        borderColor: state.isFocused ? "red" : "#00ADB5"
+      }
+    }),
+    menu: base => ({
+      ...base,
+      // override border radius to match the box
+      borderRadius: 0,
+      // kill the gap
+      marginTop: 0
+    }),
+    menuList: base => ({
+      ...base,
+      // kill the white space on first and last option
+      padding: 0
+    })
+  };
+
   return (
     <div
       className="row"
-      style={{ backgroundColor: "#b9b7bd", marginTop: "20px" }}
+      style={{ marginTop: "20px" }}
     >
       <div className="col-sm">
+      <div className="text-center">
+        <label className="mb-2">
+          <b>Host Entries</b>
+        </label>
+      </div>
         <div className="container">
           <div className="row">
-            <div style={{ width: "400px" }}>
+            <div style={{ width: "480px" }}>
               <Select
                 onChange={onHostSelect}
                 placeholder="Host"
                 options={isOptionsLoading ? [] : transformOptions(hostOptions)}
                 isLoading={isOptionsLoading}
+                styles={customStyles}
               />
             </div>
             <div className="col-sm-1" style={{ marginBottom: "3%" }}>
@@ -95,20 +130,25 @@ const ViralInfectionInput = ({ virusfamily }) => {
             <textarea
               id="host_name_textarea"
               rows="3"
-              className="form-control  bg-light "
+              className="form-control "
               value={getHosts()}
               onChange={() => {}}
-              style={{ width: "96.5%", color: "#2B7C85" }}
+              style={{ width: "96.5%", color: "#2B7C85", background: "#EEEEEE" }}
             ></textarea>
-            <div className="col-sm-3 text-white">Host Entries</div>
           </form>
         </div>
       </div>
       <div className="col-sm">
         <div className="container">
+          <div className="text-center">
+              <label className="mb-2">
+                <b>Virus Entries</b>
+              </label>
+          </div>
           <div className="row">
-            <div style={{ width: "400px" }}>
+            <div style={{ width: "480px" }}>
               <Select
+                styles={customStyles}
                 onChange={onVirusSelect}
                 options={
                   isOptionsLoading ? [] : transformOptions(virusesOptions)
@@ -117,7 +157,7 @@ const ViralInfectionInput = ({ virusfamily }) => {
                 isLoading={isOptionsLoading}
               />
             </div>
-            <div className="col-sm-1" style={{ marginBottom: "3%" }}>
+            <div className="col-sm-1" style={{ marginBottom: "3%"}}>
               <button onClick={addVirus} className="btn btn-dark">
                 Add
               </button>
@@ -128,28 +168,26 @@ const ViralInfectionInput = ({ virusfamily }) => {
             <textarea
               id="virus_name_textarea"
               rows="3"
-              className="form-control bg-light "
+              className="form-control"
               value={getViruses()}
-              style={{ width: "96.5%", color: "#2B7C85" }}
+              style={{ width: "96.5%", color: "#2B7C85", background: "#EEEEEE"}}
               readOnly
             ></textarea>
-            <div className="col-sm-3 text-white">Virus Entries</div>
           </form>
         </div>
       </div>
-      <br />
 
       <div className="row">
         <Button
           onClick={onPredicterRunButtonPressed}
           disabled={hosts.length === 0 || viruses.length === 0}
           style={{
-            marginBottom: "10%",
+            marginBottom: "2%",
             marginLeft: "40%",
-            marginTop: "10%",
+            marginTop: "2%",
             width: "20%",
-            backgroundColor: "#2B7C85",
-            borderColor: "#2B7C85",
+            backgroundColor: "#222831",
+            borderColor: "#222831",
           }}
         >
           Run
