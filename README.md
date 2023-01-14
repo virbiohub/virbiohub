@@ -8,29 +8,7 @@ Firstly, go to the frontend directory.
 For installinng dependencies:
 
   ### `yarn install`
-  
-
-For start the app:
-
- ### `yarn start`
  
-It will start the app [http://localhost:3000](http://localhost:3000) in the browser. \
-
-  
-# Backend:
-
-Go to root directory(where the manage.py file exist.) and then run 
-  ### `{environmentpath}/python/bin runserver`  
-  \
-  
-  environmentpath like : /yourusernname/adenovirus-project/viral-api-env
-  
-  
-
-
-# creating superuser for accessing admin panel( [http://localhost:8000/admin] localhost:8000/admin):
-  ### `{environmentPaTH}/python/bin createsuperuser`
-  then enter your credentials.
 
 # Available endpoints:
 
